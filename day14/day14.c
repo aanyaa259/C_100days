@@ -14,14 +14,18 @@ Output 2:
 
 */
 #include <stdio.h>
-int main () {
-int n;
-int sum = 0;
-printf("enter n:");
-scanf("%d", &n);
-for(int i=1;i<=2*n;i=i+2) {
-sum = i+1;
-}
-printf("sum of %d odd numbers:%d\n", n, sum);
-return 0;
+
+int main() {
+    int n;
+    int product = 1; 
+
+    printf("Enter n: ");
+    scanf("%d", &n);
+
+    for(int i = 2; i <= n; i += 2) { 
+        product *= i;               
+    }
+
+    printf("Product of even numbers from 1 to %d is: %d\n", n, product);
+    return 0;
 }

@@ -11,3 +11,22 @@ Output 2:
 111
 
 */
+#include <stdio.h>
+
+int main() {
+    int n, rem, binary = 0, place = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    while (n != 0) {
+        rem = n % 2;            // get last binary digit
+        binary = binary + rem * place; 
+        place = place * 10;     // shift place value
+        n = n / 2;              // reduce number
+    }
+
+    printf("Binary: %d\n", binary);
+    return 0;
+}
+
